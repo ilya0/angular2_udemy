@@ -1,14 +1,16 @@
 import { Component } from '@angular/core'
-
+import { ButtonService } from './button.service'
 @Component({
     selector: 'button',
     template:`
     <input></input>
     <br>
     <button></button>`,
-    directive:''
+    providers:[ButtonService]
 })
 
 export class ButtonComponent{
 
 }
+
+
