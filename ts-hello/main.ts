@@ -31,8 +31,8 @@ console.log("console.log of color.blue "+Color.Blue);
 let message;
 // since let is a "any" variable, you cannot do .endsWith since it is only implementable on a string variable
 message = 'abc';
-let endsWithC = (<string>message).endsWith('c');
-let alternativeWay = (message as string).endsWith('c'); // this is another way to do type assertion
+//let endsWithC = (<string>message).endsWith('c');
+//let alternativeWay = (message as string).endsWith('c'); // this is another way to do type assertion
 
 
 
@@ -42,12 +42,12 @@ let log = function(message){
 
 }
 
-let doLog = (message) => {
+let doLog1 = (message) => {
     console.log(message);
 }
 
 //function if it has one line
-let doLog = (message) => console.log(message)
+let doLog2 = (message) => console.log(message)
 
 
 
@@ -59,33 +59,15 @@ interface Point{
     y: number
 }
 
-let drawPoint = (point: Point) => {
-}
+// let drawPoint = (point: Point) => {
+// }
 // ** this is the old way - 
-// let drawPoint = (point:{ x:number, y:number}) => { 
+let drawPoint = (point:{ x:number, y:number}) => { 
 //this is inline annotations because the function is expecting a object with certain object properites
 
 
 
-drawPoint({
-    x:1,
-    y:2
-})
-
-
-
-//classes
-
-class Point{
-    x:number;
-    y:number;
-    
-        draw(){
-            //logic for drawing
-        }
-        getDistance(another:Point){
-            // logic
-        }
-}
-
-/
+// drawPoint({
+//     x:1,
+//     y:2
+// })
