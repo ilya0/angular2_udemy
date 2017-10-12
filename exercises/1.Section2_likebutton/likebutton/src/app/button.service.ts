@@ -1,7 +1,9 @@
+import {ButtonComponent} from './button.component'
 
-export class ButtonSerive{
+export class ButtonService{
     getLikes(){
         var likecounter = likecounter+1
         return likecounter
+        
     }
 }
