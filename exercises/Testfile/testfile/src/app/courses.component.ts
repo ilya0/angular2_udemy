@@ -1,6 +1,7 @@
 import { CoursesService } from './courses.service';
 import { Component } from '@angular/core';
 
+
 @Component({
     selector: 'test',
     template: `
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
      <div (click)="onDivClicked()">
         <button (click)="onSave($event)">on save button</button>
     </div>
-    <input (keyup.enter)="onKeyUp($event)"/>
+    <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" /> two way binding
  
     `
 
@@ -19,8 +20,12 @@ export class CoursesComponent{
     isActive = true;
     title = "List of courses";
     courses;
+    email = "me@example.com";
+
     onKeyUp(){
-        console.log("enter was pressed");
+        console.log(this.email);
+        //email is a template variable
+        // email =  $event.target.value
     }
 
     onDivClicked(){
