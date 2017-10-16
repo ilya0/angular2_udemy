@@ -10,10 +10,9 @@ isFavorite: boolean;
 
   constructor() { }
   ngOnInit() {}
-  onclick(){
+  onClick(){
     this.isFavorite = !this.isFavorite;
   }
-
 }
 
 

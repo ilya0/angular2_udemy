@@ -1,4 +1,12 @@
-<span class="glyphicon" [class.glyphicon-star]="isFavorite" [class.glyphicon-star-empty]="!isFavorite" (click)="onClick()"></span> test
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>Title of the document</title>
+</head>
+
+<h1 [ngClass]="{ 'glyphicon-star': isFavorite }" class="glyphicon" [class.glyphicon-star-empty]="!isFavorite" (click)="onClick()"></h1> test
 
 <!-- 
 <span 
@@ -7,3 +15,5 @@ class="glyphicon"
 [class.glyphicon-star-empty]="!isFavorite"
 (click)="onClick()"
 ></span> -->
+
+</html>
