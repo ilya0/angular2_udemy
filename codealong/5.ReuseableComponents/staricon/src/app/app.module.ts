@@ -4,11 +4,13 @@ import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { StariconComponent } from './staricon/staricon.component';
+import { PanelComponent } from './panel/panel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StariconComponent
+    StariconComponent,
+    PanelComponent
   ],
   imports: [
     BrowserModule,FormsModule
