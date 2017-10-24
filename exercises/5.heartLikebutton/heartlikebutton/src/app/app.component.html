@@ -3,6 +3,8 @@
 
 
 
-<app-heartlike>
-    [text]="tweet.text" [isSelected]="tweet.isSelected"
+<app-heartlike [text]="tweet.text" [isSelected]="tweet.isSelected">
+
 </app-heartlike>
+
+<button (click)="tweet.isSelected = !tweet.isSelected">click</button> {{tweet.isSelected}}
