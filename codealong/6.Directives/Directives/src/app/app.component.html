@@ -1,12 +1,16 @@
 <!DOCTYPE html>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 
 <!-- Directives Modify the dom - Structural - modify the dom by taking away or removing elements Attribute - directives modify the attributes of elements in the dom -->
 
+<div> NG if case is used when you have truth of false case</div>
+
 <div *ngIf="courses.length > 0; then coursesList else noCourses">
+
     <ng-template #coursesList>
         List of courses
     </ng-template>
-
 
     <ng-template #noCourses>
         No courses yet
@@ -22,4 +26,20 @@
 
 <div [hidden]="courses.length > 0">
     No courses yet2
+</div>
+
+
+<br><br>
+
+<div>ng Switch Case - multiple cases</div>
+
+<ul class="nav nav-pills">
+    <li [class.active]="viewMode =='map'"><a (click)="viewMode = 'map'">Map View</a></li>
+    <li [class.active]="viewMode =='list'"><a (click)="viewMode = 'list'">List View</a></li>
+</ul>
+
+<div [ngSwitch]="viewMode">
+    <div *ngSwitchCase="'map'">Map View Content</div>
+    <div *ngSwitchCase="'list'">list VIew content</div>
+    <div *ngSwitchDefault>Default</div>
 </div>

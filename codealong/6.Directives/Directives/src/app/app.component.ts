@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,6 @@ export class AppComponent {
   title = 'app';
     
   courses:any = [1,2];
+  viewMode = 'map';
   
 }
