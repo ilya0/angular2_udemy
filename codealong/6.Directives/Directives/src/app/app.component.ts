@@ -10,11 +10,12 @@ export class AppComponent {
   title = 'app';
   courses:any = [1,2];
   viewMode = 'map';
+  array:any;
 
-  array = [
+  tests = [
     {id: 1, name: 'course1'},
     {id: 2, name: 'course2'},
-    {id: 3, name: 'course3'},
+    {id: 3, name: 'course3'}
   ];
   
 }
