@@ -52,6 +52,34 @@
 
 <ul>
     <li *ngFor="let test of tests; index as i">
-        {{ i }} - {{ test.name }}
+        {{ i }} - {{ test.name }} <button (click)="onChange(test)">Button</button>
+
     </li>
 </ul>
+
+<button (click)="onAdd()">Button</button>
+
+<ul>
+    <li *ngFor="let test of tests; even as isEven">
+        {{ test.name }}<span *ngIf="isEven">(even)</span>
+    </li>
+</ul>
+
+<button (click)="loadCourses()">Load Courses</button>
+<ul>
+    <li *ngFor="let test of tests; trackBy: trackCourse">
+        {{ test.name }}
+    </li>
+</ul>
+
+
+<span>*******Class Binding******</span>
+
+<span [class.glyphicon-start]="isSelected" [class.glyphicon-start-empty]="!isSelected" [ngClass]="{
+    'glyphicon-start':isSelected,
+    'glyphicion-star-empty':!isSelected}" (click)="onClick()"></span>
+
+
+
+<span>*******Safe traverse operator******</span>
+<div>{{task.assignee?.name}}</div>
