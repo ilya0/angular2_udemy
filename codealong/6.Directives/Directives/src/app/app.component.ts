@@ -45,7 +45,7 @@ onclick(){
 task = {
   title: 'Reivew apps',
   assignee:{
-    name: 'John Smith'
+    name: 'Johnx Smith'
   }
   }
 }
