@@ -1,4 +1,4 @@
-<button class="glyphicon" [ngClass]="{ 'glyphicon-menu-down': !isButtonClicked }" [class.glyphicon-menu-up]="isButtonClicked" (click)="isButtonClicked = !isButtonClicked">{{ ButtonName }}</button>
+<button class="glyphicon" [ngClass]="{ 'glyphicon-menu-down': !isButtonClicked, 'glyphicon-menu-up' : isButtonClicked }" (click)="isButtonClicked = !isButtonClicked">{{ ButtonName }}</button>
 <ul [hidden]=!isButtonClicked>
     <li>thing 1</li>
     <li>thing 2</li>
